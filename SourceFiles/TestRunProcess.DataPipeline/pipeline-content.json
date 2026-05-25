@@ -1,0 +1,48 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Test",
+        "type": "Wait",
+        "dependsOn": [],
+        "typeProperties": {
+          "waitTimeInSeconds": 1
+        }
+      },
+      {
+        "name": "Call Value",
+        "type": "SetVariable",
+        "dependsOn": [
+          {
+            "activity": "Test",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "variableName": "varEmpId",
+          "value": 34343
+        }
+      }
+    ],
+    "variables": {
+      "varEmpId": {
+        "type": "Integer",
+        "defaultValue": 454
+      },
+      "varEmpName": {
+        "type": "String",
+        "defaultValue": "Test"
+      },
+      "varEmpSalay": {
+        "type": "String",
+        "defaultValue": "Hello"
+      }
+    }
+  }
+}
