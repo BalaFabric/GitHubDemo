@@ -8,12 +8,13 @@
 # META   },
 # META   "dependencies": {
 # META     "lakehouse": {
-# META       "default_lakehouse": "387c3f29-405d-4f9c-b7de-077c03d7c2a4",
+# META       "default_lakehouse": "03d7c2a4-077c-b7de-4f9c-405d387c3f29",
 # META       "default_lakehouse_name": "DWLakehouse",
-# META       "default_lakehouse_workspace_id": "aa2a53d5-42a1-4309-adad-060058c42a82",
+# META       "default_lakehouse_workspace_id": "00000000-0000-0000-0000-000000000000",
 # META       "known_lakehouses": [
 # META         {
-# META           "id": "387c3f29-405d-4f9c-b7de-077c03d7c2a4"
+# META           "id": "03d7c2a4-077c-b7de-4f9c-405d387c3f29",
+# META           "workspace_id": "00000000-0000-0000-0000-000000000000"
 # META         }
 # META       ]
 # META     }
@@ -51,6 +52,20 @@ display(df)
 # CELL ********************
 
 df.write.format('delta').mode('append').saveAsTable('SalesData')
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+varEmpId = 101
+varEmpName = 'Test'
+print(varEmpId)
+print(varEmpName)
 
 # METADATA ********************
 
