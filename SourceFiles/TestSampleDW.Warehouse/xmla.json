@@ -495,6 +495,102 @@
         ]
       },
       {
+        "name": "Employee",
+        "sourceLineageTag": "[dbo].[Employee]",
+        "columns": [
+          {
+            "name": "EmployeeID",
+            "dataType": "int64",
+            "sourceColumn": "EmployeeID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "EmployeeID",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EmployeeName",
+            "dataType": "string",
+            "sourceColumn": "EmployeeName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EmployeeName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Department",
+            "dataType": "string",
+            "sourceColumn": "Department",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Department",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Salary",
+            "dataType": "decimal",
+            "sourceColumn": "Salary",
+            "sourceProviderType": "decimal",
+            "sourceLineageTag": "Salary",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "JoiningDate",
+            "dataType": "dateTime",
+            "sourceColumn": "JoiningDate",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "JoiningDate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "Employee",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
         "name": "Geography",
         "sourceLineageTag": "[dbo].[Geography]",
         "columns": [

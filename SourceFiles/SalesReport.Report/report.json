@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.73\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU05\",\"version\":{\"visual\":\"2.9.0\",\"report\":\"3.3.0\",\"page\":\"2.3.1\"},\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY26SU05",
+            "path": "BaseThemes/CY26SU05.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "6917985a91b7377e84a1",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a95607e79a1839d3d1a3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":163.70068027210885,\"y\":168.9251700680272,\"z\":0,\"width\":1003.1020408163265,\"height\":505.03401360544217,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Employee.Department\"},{\"queryRef\":\"CountNonNull(Employee.EmployeeID)\"},{\"queryRef\":\"Employee.EmployeeName\"},{\"queryRef\":\"Employee.JoiningDate\"},{\"queryRef\":\"Sum(Employee.Salary)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Employee\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Department\"},\"Name\":\"Employee.Department\",\"NativeReferenceName\":\"Department\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"EmployeeID\"},\"Name\":\"CountNonNull(Employee.EmployeeID)\",\"NativeReferenceName\":\"EmployeeID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"EmployeeName\"},\"Name\":\"Employee.EmployeeName\",\"NativeReferenceName\":\"EmployeeName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"JoiningDate\"},\"Name\":\"Employee.JoiningDate\",\"NativeReferenceName\":\"JoiningDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Salary\"}},\"Function\":0},\"Name\":\"Sum(Employee.Salary)\",\"NativeReferenceName\":\"Sum of Salary\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 505.03,
+          "width": 1003.10,
+          "x": 163.70,
+          "y": 168.93,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+table Employee
+	lineageTag: 4d72deb9-47f4-4494-b02d-0d6e3cc65755
+	sourceLineageTag: [dbo].[Employee]
+
+	column EmployeeID
+		dataType: int64
+		formatString: 0
+		lineageTag: b00a3d0c-df1c-43a7-98aa-ce0fbe249b4e
+		sourceLineageTag: EmployeeID
+		summarizeBy: count
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeName
+		dataType: string
+		lineageTag: 0d92264f-61f4-4719-a61c-4a753a7fdb26
+		sourceLineageTag: EmployeeName
+		summarizeBy: none
+		sourceColumn: EmployeeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department
+		dataType: string
+		lineageTag: 2662ea80-4db4-482c-8d86-1e1ce7bd09ba
+		sourceLineageTag: Department
+		summarizeBy: none
+		sourceColumn: Department
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salary
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: c55b32df-e75a-4596-87f9-57d536eb4e1d
+		sourceLineageTag: Salary
+		summarizeBy: sum
+		sourceColumn: Salary
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column JoiningDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ef3bcc48-8110-4a1a-92ed-0021087c4d60
+		sourceLineageTag: JoiningDate
+		summarizeBy: none
+		sourceColumn: JoiningDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Employee = entity
+		mode: directLake
+		source
+			entityName: Employee
+			schemaName: dbo
+			expressionSource: 'DirectLake - TestSampleDW'
+
